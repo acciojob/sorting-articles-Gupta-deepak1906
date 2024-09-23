@@ -4,11 +4,11 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 function strip(bandName) {
 	return bandName.replace(/^(a |an |the)/i, '').trim();
 }
-const sortBands = bands.sort((a,b) => strip(a).localeCompare(strip(b)));
+const sortedBands = bands.sort((a,b) => strip(a).localeCompare(strip(b)));
 
 const bandList = document.getElementById('band');
 
-sortBands.forEach(band => {
+sortedBands.forEach(band => {
 	const li = document.createElement('li');
 	li.textContent = band;
 	bandList.appendChild(li);
