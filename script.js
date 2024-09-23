@@ -8,8 +8,8 @@ const sortedBands = bands.sort((a,b) => strip(a).localeCompare(strip(b)));
 
 const bandList = document.getElementById('band');
 
-sortedBands.forEach(bands => {
+sortedBands.forEach(band => {
 	const li = document.createElement('li');
-	li.textContent = bands;
+	li.textContent = band;
 	bandList.appendChild(li);
 })
